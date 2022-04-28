@@ -1,0 +1,30 @@
+<div class="dash-bak">
+    <h4>Player Details</h4>
+    <table>
+      
+        <tr>
+            <th> </th> 
+            <th>Player</th> 
+            <th>Score</th>
+            <th>Details</th>
+        </tr>
+        
+        <tr *ngFor="let data of dPlist">
+            <td><img src="{{data.imgsrc}}" class="r-img"></td>
+            <td> {{data.name}}</td>
+            <td>{{data.score}} </td>
+            <td> <input type="button" value="See Details" (click)="onShowPop(data)"> </td>
+        </tr>
+        
+        
+        
+        </table> 
+       
+        <div>
+            <app-player [chkVis]="showDetail" [pimg]="playerImg" [pdesc]="playerDesc" (popVal)="onPopChange($event)"></app-player>
+        
+        </div>
+
+    
+</div>
+

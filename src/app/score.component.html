@@ -1,0 +1,18 @@
+
+<div class="score-bak">
+    <h4>Update Player score</h4>
+    <table>
+      
+        
+        
+        <tr *ngFor="let data of sPlist">
+            <td> {{data.name}}</td>
+            <td> <input (keyup)="onInpuText($event)"></td>
+            <td> <input type="button" (click)="onGetInput(data.id)" value="Add"> </td>
+        </tr>
+        
+        
+        
+        </table> 
+    
+    </div>
